@@ -1,0 +1,46 @@
+{
+  "pull_request": {
+    "pr_id": "2693060494",
+    "pr_user": "TanjinAlam",
+    "owner": "TanjinAlam",
+    "repo": "OSS-TEST",
+    "prNumber": "13",
+    "installationId": "76561316",
+    "pr_repo_name": "TanjinAlam/OSS-TEST",
+    "pr_number": 13,
+    "pr_title": "Dev",
+    "pr_body": "# Pull Request\n\n## 📋 Description\n\nProvide a brief description of the changes in this PR.\n\n",
+    "pr_state": "open",
+    "pr_created_at": "2025-07-24T19:52:40Z",
+    "pr_updated_at": "2025-07-24T19:52:46Z",
+    "pr_head_branch": "dev",
+    "pr_base_branch": "main",
+    "pr_head_sha": "f89469c3c2f2ef33be4dc439312c8cf17e20c873",
+    "pr_base_sha": "40fa4b42bc4166f09be0703769330ca306cfc813",
+    "pr_files_changed": 2,
+    "pr_files": {
+      "pr_file_1": {
+        "pr_file_1_name": "index_4.js",
+        "pr_file_1_status": "added",
+        "pr_file_1_additions": 33,
+        "pr_file_1_deletions": 0,
+        "pr_file_1_changes": 33,
+        "pr_file_1_content_before": "File not found in base branch",
+        "pr_file_1_content_after": "//write a function that takes a string and return  how many times each character appears in the string\n// This function counts the occurrences of each character in a string\nfunction countCharacters(str) {\n    const charCount = {};\n    for (let char of str) {\n        if (charCount[char]) {\n            charCount[char]++;\n        } else {\n            charCount[char] = 1;\n        }\n    }\n    return charCount;\n}\n\n\n\n//write a function that checks if two strings are anagrams\nfunction areAnagrams(str1, str2) {\n    const count1 = countCharacters(str1);\n    const count2 = countCharacters(str2);\n    \n    if (Object.keys(count1).length !== Object.keys(count2).length) {\n        return false;\n    }\n    \n    for (let char in count1) {\n        if (count1[char] !== count2[char]) {\n            return false;\n        }\n    }\n    \n    return true;\n}",
+        "pr_file_1_diff": "@@ -0,0 +1,33 @@\n+//write a function that takes a string and return  how many times each character appears in the string\n+// This function counts the occurrences of each character in a string\n+function countCharacters(str) {\n+    const charCount = {};\n+    for (let char of str) {\n+        if (charCount[char]) {\n+            charCount[char]++;\n+        } else {\n+            charCount[char] = 1;\n+        }\n+    }\n+    return charCount;\n+}\n+\n+\n+\n+//write a function that checks if two strings are anagrams\n+function areAnagrams(str1, str2) {\n+    const count1 = countCharacters(str1);\n+    const count2 = countCharacters(str2);\n+    \n+    if (Object.keys(count1).length !== Object.keys(count2).length) {\n+        return false;\n+    }\n+    \n+    for (let char in count1) {\n+        if (count1[char] !== count2[char]) {\n+            return false;\n+        }\n+    }\n+    \n+    return true;\n+}\n\\ No newline at end of file",
+        "pr_file_1_blob_url": "https://github.com/TanjinAlam/OSS-TEST/blob/f89469c3c2f2ef33be4dc439312c8cf17e20c873/index_4.js"
+      },
+      "pr_file_2": {
+        "pr_file_2_name": "index_5.js",
+        "pr_file_2_status": "added",
+        "pr_file_2_additions": 32,
+        "pr_file_2_deletions": 0,
+        "pr_file_2_changes": 32,
+        "pr_file_2_content_before": "File not found in base branch",
+        "pr_file_2_content_after": "//write a function that checks if two strings are anagrams\n// This function counts the occurrences of each character in a string\nfunction areAnagrams(str1, str2) {\n    const count1 = countCharacters(str1);\n    const count2 = countCharacters(str2);\n    if (Object.keys(count1).length !== Object.keys(count2).length) {\n        return false;\n    }\n    for (let char in count1) {\n        if (count1[char] !== count2[char]) {\n            return false;\n        }\n    }\n    return true;\n}\n\n\n\n//write a function that takes a string and return  how many times each character appears in the string\nfunction countCharacters(str) {\n    const charCount = {};\n    \n    for (let char of str) {\n        if (charCount[char]) {\n            charCount[char]++;\n        } else {\n            charCount[char] = 1;\n        }\n    }\n    \n    return charCount;\n}\n",
+        "pr_file_2_diff": "@@ -0,0 +1,32 @@\n+//write a function that checks if two strings are anagrams\n+// This function counts the occurrences of each character in a string\n+function areAnagrams(str1, str2) {\n+    const count1 = countCharacters(str1);\n+    const count2 = countCharacters(str2);\n+    if (Object.keys(count1).length !== Object.keys(count2).length) {\n+        return false;\n+    }\n+    for (let char in count1) {\n+        if (count1[char] !== count2[char]) {\n+            return false;\n+        }\n+    }\n+    return true;\n+}\n+\n+\n+\n+//write a function that takes a string and return  how many times each character appears in the string\n+function countCharacters(str) {\n+    const charCount = {};\n+    \n+    for (let char of str) {\n+        if (charCount[char]) {\n+            charCount[char]++;\n+        } else {\n+            charCount[char] = 1;\n+        }\n+    }\n+    \n+    return charCount;\n+}",
+        "pr_file_2_blob_url": "https://github.com/TanjinAlam/OSS-TEST/blob/f89469c3c2f2ef33be4dc439312c8cf17e20c873/index_5.js"
+      }
+    }
+  }
+}

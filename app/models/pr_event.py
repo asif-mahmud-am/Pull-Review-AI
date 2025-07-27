@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from typing import Optional
+from typing import Optional, Dict, List
 
 
 class User(BaseModel):
@@ -74,3 +74,37 @@ class PullRequestEvent(BaseModel):
 
     def get_pull_request_title(self):
         return self.pull_request.title
+
+class PRUser(BaseModel):
+    login: str
+
+class PullRequestInput(BaseModel):
+    title: str
+    body: str
+    user: PRUser
+    url: str
+    diff_url: str
+    number: int
+
+class RepositoryInput(BaseModel):
+    description: str
+
+class PRPayload(BaseModel):
+    pull_request: PullRequestInput
+    repository: RepositoryInput
+
+class PRFileInfo(BaseModel):
+    pr_file_name: str
+    pr_file_status: str
+    pr_file_additions: int
+    pr_file_deletions: int
+    pr_file_changes: int
+    pr_file_content_before: str
+    pr_file_content_after: str
+    pr_file_diff: str
+    pr_file_blob_url: str
+
+
+class PRPayloadV2(BaseModel):
+    pull_request: dict  # Use dict for now, can be further typed if needed
+    # The structure of pull_request matches the provided JSON
